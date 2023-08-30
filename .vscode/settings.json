@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "Social Media API\\social-media-api\\src\\main\\java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Programs\\SQLite\\sqlite-jdbc-3.42.0.1.jar"
+    ]
+}

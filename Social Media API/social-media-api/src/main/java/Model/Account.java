@@ -51,4 +51,19 @@ public class Account {
     public String getPassword(){ return this.password; }
     // password Setter Method
     public void setPassword(String password){ this.password = password; }
+
+    /*
+     * toString() Method Override
+     * INPUT: N/A
+     * OUTPUT: 1 String
+     * Returns the class instance's data in a String
+    */
+    @Override
+    public String toString(){
+        return "Account{" +
+            "accountId = " + this.accountId +
+            ", username = " + this.username +
+            ", password = " + this.password +
+            "}";
+    } 
 }

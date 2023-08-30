@@ -59,4 +59,20 @@ public class Message {
     public long getTimePostedEpoch(){ return this.timePostedEpoch; }
     // timePostedEpoch Setter Method
     public void setTimePostedEpoch(long timePostedEpoch){ this.timePostedEpoch = timePostedEpoch; }
+
+    /*
+     * toString() Method Override
+     * INPUT: N/A
+     * OUTPUT: 1 String
+     * Returns the class instance's data in a String
+    */
+    @Override
+    public String toString(){
+        return "Message{" +
+            "messageId = " + this.messageId +
+            ", postedBy = " + this.postedBy +
+            ", messageText = " + this.messageText +
+            ", timePostedEpoch = " + this.timePostedEpoch +
+            "}";
+    }
 }

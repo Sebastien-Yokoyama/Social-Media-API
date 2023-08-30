@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionUtil {
-    private static String url = "jdbc:sqlite:D:\\Programs\\SQLite/Databases\\SocialMediaApi\\SocialMediaDB.db";
+    private static String url = "jdbc:sqlite:D:\\Programs\\SQLite\\Databases\\SocialMediaApi\\SocialMediaDB.db";
     private static Connection connection = null;
 
     public static Connection getConnection(){
@@ -19,7 +19,8 @@ public class ConnectionUtil {
                 connection = DriverManager.getConnection(url);
             }
             catch(SQLException e){
-                e.printStackTrace();
+                System.out.println("Database failed to connect!");
+                e.printStackTrace();   
             }
         }
 

@@ -26,5 +26,5 @@ public interface AccountDAO {
     public Account updateAccount(Account user);
 
     // Delete Account by ID
-    public Account deleteAccount();
+    public Account deleteAccount(int id);
 }

@@ -3,7 +3,7 @@
 /* FILE DESCRIPTION: Interface that defines CRUD behavior for user account data.
 */
 
-package DAO;
+package DAO.Account;
 
 import Model.Account;
 

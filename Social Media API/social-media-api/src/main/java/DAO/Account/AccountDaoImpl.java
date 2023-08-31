@@ -3,7 +3,7 @@
 /* FILE DESCRIPTION: Class implementation of AccountDAO interface
 */
 
-package DAO;
+package DAO.Account;
 
 import Model.Account;
 import Utility.ConnectionUtil;

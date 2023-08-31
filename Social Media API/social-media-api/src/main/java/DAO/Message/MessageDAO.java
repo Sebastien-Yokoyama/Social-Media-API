@@ -16,6 +16,9 @@ public interface MessageDAO {
     // Retrieve Message by ID
     public Message selectMessageById(int id);
 
+    // Retrieve Message by Data
+    public Message selectMessageByData(Message msg);
+
     // Retrieve all Messages from User
     public List<Message> selectAllMessagesFromUser(int accountId);
 

@@ -1,14 +1,13 @@
 // AUTHOR: Sebastien Yokoyama
 // FILE NAME: SocialMediaService.java
 /*
- * FILE DESCRIPTION: Class that implements the business logic for data
+ * FILE DESCRIPTION: Class that implements the CRUD logic for data
 */
 
 package Service;
 
 import java.util.List;
 
-import DAO.*;
 import DAO.Account.AccountDaoImpl;
 import DAO.Message.MessageDaoImpl;
 import Model.Account;
@@ -148,8 +147,8 @@ public class SocialMediaService {
      * Updates the message with the given messageId and returns it
      * Returns null if unsuccessful
     */
-    public Message messageUpdate(Message msg){
-        return messageDao.updateMessage(msg);
+    public Message messageUpdate(int id, String newText){
+        return messageDao.updateMessage(id, newText);
     }
 
     /*

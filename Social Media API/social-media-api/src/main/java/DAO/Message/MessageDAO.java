@@ -26,7 +26,7 @@ public interface MessageDAO {
     public List<Message> selectAllMessages();
 
     // Update Message
-    public Message updateMessage(Message msg);
+    public Message updateMessage(int id, String newText);
 
     // Delete Message by ID
     public Message deleteMessage(int id);

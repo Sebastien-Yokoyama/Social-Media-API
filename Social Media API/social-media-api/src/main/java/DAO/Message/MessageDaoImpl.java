@@ -195,7 +195,7 @@ public class MessageDaoImpl implements MessageDAO {
          * Updates the given Message in the DB with the input data
          * Returns null if unsuccessful
         */
-        public Message updateMessage(Message msg){
+        public Message updateMessage(int id, String newText){
             // Establish connection to DB
             Connection connection = ConnectionUtil.getConnection();
 
@@ -204,12 +204,12 @@ public class MessageDaoImpl implements MessageDAO {
                 String sql = "UPDATE messages SET messageText = ? WHERE messageId = ?";
 
                 PreparedStatement ps = connection.prepareStatement(sql);
-                ps.setString(1, msg.getMessageText());
-                ps.setInt(2, msg.getPostedBy());
+                ps.setString(1, newText);
+                ps.setInt(2, id);
 
                 // Check if successful
                 if(ps.executeUpdate() > 0){
-                    return selectMessageById(msg.getMessageId());
+                    return selectMessageById(id);
                 }
             }
             catch(SQLException e){

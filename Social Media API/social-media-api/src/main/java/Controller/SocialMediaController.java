@@ -8,13 +8,9 @@ package Controller;
 
 import io.javalin.Javalin;
 import io.javalin.http.Context;
-import io.javalin.security.RouteRole;
-import io.javalin.http.Handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
-
-import java.util.Set;
 
 import Model.Account;
 import Model.Message;

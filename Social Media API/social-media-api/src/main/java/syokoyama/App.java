@@ -5,39 +5,16 @@
 
 package syokoyama;
 
-import Model.*;
-import Utility.ConnectionUtil;
+import io.javalin.Javalin;
 
-import java.sql.*;
+import Controller.SocialMediaController;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        Connection connection = ConnectionUtil.getConnection();
-
-        try{
-            String sql = "SELECT * FROM accounts";
-            // String sql = "SELECT * FROM messages";
-        
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-
-            ResultSet rs = preparedStatement.executeQuery();
-
-            Account account = new Account(rs.getInt("accountId"),
-                rs.getString("username"), rs.getString("password"));
-                
-            System.out.println(account.toString());
-
-            // Message message = new Message(
-            //     rs.getInt("messageId"), rs.getInt("postedBy"),
-            //     rs.getString("messageText"), rs.getLong("timePostedEpoch")
-            // );
-
-            // System.out.println(message.toString());
-        }
-        catch(SQLException e){
-            System.out.println(e.getMessage());
-        }
+        SocialMediaController controller = new SocialMediaController();
+        Javalin app = controller.startAPI();
+        app.start(80);
     }
 }
